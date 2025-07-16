@@ -124,7 +124,7 @@ app.post("/api/v1/brain/share", userMiddleware,async (req, res) => {
 
     const hash=random(10);
     console.log("value of hash" + hash);
-    
+
     await LinkModel.create({
       //@ts-ignore
       userId: req.userId,
@@ -169,7 +169,7 @@ app.get("/api/v1/brain/:shareLink",async (req, res) => {
 
   //get User data
   const user=await UserModel.findOne({
-    userId: link.userId
+    _id: link.userId
   })
 
   res.json({

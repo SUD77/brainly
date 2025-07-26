@@ -6,7 +6,7 @@ import mongoose, { Types,Schema, model } from "mongoose";
 
 mongoose.connect("mongodb+srv://jaiswalsudhanshu20:w4J93K3dfaEebq3m@cluster0.xy7jo.mongodb.net/brainly");
 
-const contentTypes=['image','video','article','audio'];
+const contentTypes=['image','video','article','audio',"link"];
 
 const userSchema = new Schema({
   username: { type: String, required: true, unique: true },
